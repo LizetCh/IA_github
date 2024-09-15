@@ -6,15 +6,15 @@ Algorithm to find the shortest path between two nodes
 from collections import deque
 
 def bfs_shortest_path(graph, start, end):
-		toVisit = deque([(start, [start])]) #creates a double ended queue
-		while toVisit: #while there's nodes to visit
-				(node, path) = toVisit.popleft() #(node,path to node), FIFO 
+		toVisit_queue = deque([(start, [start])]) #creates a double ended queue
+		while toVisit_queue: #while there's nodes to visit
+				(node, path) = toVisit_queue.popleft() #(node,path to node), FIFO 
 				for neighbor in graph[node]:
 						if neighbor not in path: #if not visited
 								if neighbor == end: #check if we've arrived
 										return path + [neighbor]
 								else:
-										toVisit.append((neighbor, path + [neighbor]))
+										toVisit_queue.append((neighbor, path + [neighbor]))
 		return None
 
 graph = {
