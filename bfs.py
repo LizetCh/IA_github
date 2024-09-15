@@ -53,7 +53,7 @@ graph = {
 		'Tzucacab': ['Peto'],
 }
 
-start_node = 'Pisté'
-end_node = 'Tzucacab'
+start_node = 'Mérida'
+end_node = 'Peto'
 
 print(bfs_shortest_path(graph, start_node, end_node))
