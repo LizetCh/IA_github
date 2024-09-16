@@ -27,7 +27,7 @@ def a_star(graph, start, end):
 				new_cost = cost + neighbor_cost
 				heappush(open_list, (new_cost + heuristic(neighbor, end), new_cost, neighbor, path + [neighbor]))
 				
-	return None
+	return "No path found"
 
 
 graph = {
